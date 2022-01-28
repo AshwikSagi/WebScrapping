@@ -93,8 +93,8 @@ let args = minimist(process.argv);
 // save in excel using excel4node
 // create folders and prepare pdfs
 
-let reponseKaPromise = axios.get(args.source);
-reponseKaPromise.then(function (response) {
+let PromiseForResponse = axios.get(args.source);
+PromiseForResponse.then(function (response) {
     let html = response.data;
 
     let dom = new jsdom.JSDOM(html);
